@@ -1,0 +1,67 @@
+{
+  "welcome/cage": {
+    "hash": "285662a2f4793272c4b27d9b00b1ecd4e366a7c50215d8016024510e9c5a16d7",
+    "count": 7,
+    "format": "sections"
+  },
+  "welcome/location": {
+    "hash": "cbd17aeff91c7f22d25f81c80bea90a8f16ffb7cacb69b31cb8911e4a5dc52ff",
+    "count": 5,
+    "format": "sections"
+  },
+  "welcome/setup": {
+    "hash": "891e0a80cd7ab70b42cb0a46b395ee0c1735733a5a920df9953a1262989a131a",
+    "count": 6,
+    "format": "sections"
+  },
+  "welcome/first-meal": {
+    "hash": "739bbac888e9f241b7a7e5e1f7f0bbecdfb4ebb79f7afaf93775de206afa4553",
+    "count": 6,
+    "format": "sections"
+  },
+  "welcome/settling": {
+    "hash": "0f7f4d7af9a9c7a31ef71c5ce62737928f5aeeed80cbb2e406a7660071741a6a",
+    "count": 5,
+    "format": "sections"
+  },
+  "welcome/health": {
+    "hash": "4d02ae3d857f68901f6e2e3f05c419ea316c8775838260118da3ae708b348844",
+    "count": 7,
+    "format": "sections"
+  },
+  "food/guide": {
+    "hash": "8dfae8f7bdaf9d7a7fb7c68756ed8639ecc9f9f659eed12037f655989a4c4c2e",
+    "count": 12,
+    "format": "questions"
+  },
+  "home/cleaning": {
+    "hash": "4a19dedb66fd4fbe1df39d0b340bba0a34e934daef5f806fb7f84815d44287e5",
+    "count": 7,
+    "format": "questions"
+  },
+  "home/sleep": {
+    "hash": "fd69eb272ef74b977efcd3e1cf81088b2dabd1913e088ecba24f6d57b4e9095c",
+    "count": 7,
+    "format": "questions"
+  },
+  "behavior/guide": {
+    "hash": "d8060609fbdc7db726a689e6e4134a2c469e3a210da7403a5e292f45ac797bab",
+    "count": 7,
+    "format": "questions"
+  },
+  "play/guide": {
+    "hash": "39c0ce5c91346f66ac4afedcb1df6113ed41b65bbc6a94c5af16fdeb4a6a753e",
+    "count": 7,
+    "format": "questions"
+  },
+  "home/safety": {
+    "hash": "51b454c3d625ebd3dd3f5d56a7dc3896208fca226c91dbeb39fefd3882966d72",
+    "count": 3,
+    "format": "html"
+  },
+  "health/guide": {
+    "hash": "e74ce92c38ed9864ff579229b5911a67c4116d918daf94100cc9047328390060",
+    "count": 10,
+    "format": "html"
+  }
+}

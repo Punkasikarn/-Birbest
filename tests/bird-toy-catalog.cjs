@@ -1,0 +1,52 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const root = path.join(__dirname, '..');
+const read = name => fs.readFileSync(path.join(root, name), 'utf8');
+const control = () => ({events:{},addEventListener(k,fn){this.events[k]=fn;},setAttribute(){},focus(){}});
+let section, handler;
+const parts = Object.fromEntries(['.product-full','.product-caption','.product-counter','[data-close]','[data-prev]','[data-next]'].map(k=>[k,control()]));
+const dialog = {...control(),querySelector:s=>parts[s],showModal(){this.open=true;},close(){this.open=false;this.events.close();}};
+const context = {window:{addEventListener(k,fn){if(k==='hashchange')handler=fn;}},document:{querySelector:s=>s==='#shop-bird-toy-gallery'?section:null,createElement:()=>dialog,body:{append(){}}}};
+vm.createContext(context);
+for(const f of ['crochet-data.js','hat-data.js','sticker-data.js','keychain-data.js','shirt-data.js','bird-toy-data.js','crochet-catalog.js','home-products.js']) vm.runInContext(read(f),context);
+const api = context.window.BirbestCrochet;
+const birdToys = context.window.BirbestBirdToyProducts;
+assert.equal(birdToys.length,3);
+assert.equal(api.filterItems('','').length,74);
+assert.equal(api.filterItems('','ของเล่นและอุปกรณ์นก').length,3);
+assert.equal(api.filterItems('Feeder','').length,1);
+assert.equal(api.filterItems('ซันคอนัวร์','ของเล่นและอุปกรณ์นก').length,1);
+assert.equal(api.filterItems('โครเชต์','ของเล่นและอุปกรณ์นก').length,0);
+assert.equal(api.filterItems('','')[0].slug,'daily-pack');
+const flow = read('flow.js');
+const branch = flow.slice(flow.indexOf('    const birdToyProduct ='),flow.indexOf('    const shirtProduct ='));
+for(const p of birdToys){
+  assert.equal(p.price,{'chirp-hanging-feeder':29,'chirp-twinkle-star':89,'chirp-snug-hut':349}[p.slug]);
+  assert.equal((api.card(p).match(/<img /g)||[]).length,1);
+  assert.ok(api.card(p).includes(p.priceLabel));
+  for(const shot of p.shots){
+    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets',shot.file))).digest('hex'),shot.sha256);
+  }
+  const routeContext={route:'shop/'+p.slug,window:{BirbestBirdToyProducts:birdToys,scrollTo(){}},view:{focus(){}},document:{},heading:t=>t,esc:s=>s};
+  vm.runInNewContext('(function(){'+branch+'})()',routeContext);
+  assert.ok(routeContext.view.innerHTML.includes('data-product="'+p.slug+'"'));
+  const controls=Object.fromEntries(['[data-main-photo]','[data-main-image]','[data-image-count]'].map(k=>[k,control()]));
+  const thumbs=p.shots.map((_,i)=>({...control(),dataset:{thumbnail:String(i)}}));
+  section={dataset:{product:p.slug},querySelector:s=>controls[s],querySelectorAll:()=>thumbs};
+  handler();
+  assert.ok(section.innerHTML.includes(p.priceLabel));
+  assert.ok(section.innerHTML.includes('ตัวเลือกสินค้า'));
+  assert.ok(section.innerHTML.includes('https://shopee.co.th/birbest.official'));
+  assert.ok(!section.innerHTML.includes('https://birbest.etsy.com/'));
+  thumbs.forEach((t,i)=>{t.events.click();assert.equal(controls['[data-main-image]'].src,'assets/'+p.shots[i].file);});
+  controls['[data-main-photo]'].events.click();
+  assert.equal(dialog.open,true);
+  parts['[data-next]'].events.click();
+  assert.equal(parts['.product-full'].src,'assets/'+p.shots[0].file);
+  parts['[data-close]'].events.click();
+  assert.equal(dialog.open,false);
+}
+console.log('PASS: three bird accessories, screenshot prices, images, filters, detail routes, galleries and lightbox. Browser rendering pending.');

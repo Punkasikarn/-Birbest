@@ -1,0 +1,13 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const read = file => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
+const chapters = read('home-chapters.js');
+const flow = read('flow.js');
+assert.ok(chapters.includes('ดูสินค้าทั้งหมด <span'));
+assert.ok(chapters.includes('ดูเรื่องเล่าทั้งหมด <span'));
+assert.ok(flow.includes("heading('ร้านค้า Birbest'"));
+const channelCopy = 'Daily Pack มีจำหน่ายบน Shopee · งานฝีมือและงานอาร์ตมีทั้ง Shopee และ Etsy';
+assert.equal(flow.split(channelCopy).length - 1, 2);
+assert.ok(read('typography.css').includes('font-weight:500;color:#52665f;text-decoration-thickness:2px'));
+console.log('PASS: destination labels, shop/contact channel copy and secondary heading weight.');

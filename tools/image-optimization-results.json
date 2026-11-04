@@ -1,0 +1,110 @@
+[
+  {
+    "name": "home-village-layer",
+    "original": 2572128,
+    "optimized": 2015480,
+    "savedPercent": 22,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "mascot-udon",
+    "original": 1166015,
+    "optimized": 776384,
+    "savedPercent": 33,
+    "width": 1308,
+    "height": 1203,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "mascot-raptor",
+    "original": 1850032,
+    "optimized": 788906,
+    "savedPercent": 57,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "village-residents",
+    "original": 581576,
+    "optimized": 396524,
+    "savedPercent": 32,
+    "width": 1448,
+    "height": 1086,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "hero-cloud",
+    "original": 1014185,
+    "optimized": 689836,
+    "savedPercent": 32,
+    "width": 2172,
+    "height": 724,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "birbest-rainbow-original",
+    "original": 494357,
+    "optimized": 193548,
+    "savedPercent": 61,
+    "width": 2756,
+    "height": 2362,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "about-care",
+    "original": 2360864,
+    "optimized": 1776622,
+    "savedPercent": 25,
+    "width": 1448,
+    "height": 1086,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "learn-foraging",
+    "original": 2307951,
+    "optimized": 1593854,
+    "savedPercent": 31,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "learn-trust",
+    "original": 2341894,
+    "optimized": 1584128,
+    "savedPercent": 32,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "learn-cleaning",
+    "original": 2475546,
+    "optimized": 1679886,
+    "savedPercent": 32,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "learn-food-types",
+    "original": 2410313,
+    "optimized": 1683472,
+    "savedPercent": 30,
+    "width": 1536,
+    "height": 1024,
+    "visiblePixelsUnchanged": true
+  },
+  {
+    "name": "home-cover",
+    "original": 1674154,
+    "optimized": 957130,
+    "savedPercent": 43,
+    "width": 1448,
+    "height": 1086,
+    "visiblePixelsUnchanged": true
+  }
+]

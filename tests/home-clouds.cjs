@@ -1,0 +1,31 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.join(__dirname, '..');
+const css = fs.readFileSync(path.join(root, 'home-chapters.css'), 'utf8');
+const section = css.slice(css.indexOf('/* Keep cloud silhouettes'), css.indexOf('/* Scene coordinates'));
+for (const color of ['white','green','blue','sky']) {
+  const file = `assets/transition-chapter-${color}.svg`;
+  assert.ok(section.includes(file));
+  assert.match(fs.readFileSync(path.join(root,file),'utf8'), /viewBox="0 0 1200 120"/);
+}
+assert.ok(section.includes('transition-story.svg'));
+assert.ok(section.includes('clip-path:inset(-32px 0 1px 0)'));
+assert.ok(section.includes('pointer-events:none'));
+assert.ok(section.includes('overflow:visible;isolation:isolate;z-index:1'), 'Later chapter clouds must paint over the preceding chapter');
+assert.ok(section.includes('filter:drop-shadow'));
+assert.ok(section.includes('padding-bottom:128px'));
+assert.ok(section.includes('padding-bottom:96px'));
+assert.ok(section.includes('min-height:48px'));
+assert.ok(section.includes('overflow-wrap:anywhere'));
+assert.ok(section.includes('::after{content:\'\';display:block;width:100%;aspect-ratio:3/2'));
+assert.ok(section.includes('center / contain no-repeat'));
+assert.ok(section.includes('-webkit-mask-image:linear-gradient(to bottom,transparent 0%'));
+assert.ok(section.includes('mask-image:linear-gradient(to bottom,transparent 0%'));
+assert.ok(section.includes('#000 17%'), 'Only the upper edge fades; the rest of the scene remains opaque');
+assert.ok(!section.includes('.hero'));
+assert.ok(section.includes('.welcome-ribbon{display:none}'));
+assert.ok(section.includes("#today{--chapter-edge:url('assets/transition-chapter-white.svg');margin-top:0}"));
+assert.ok(!section.includes('margin-top:76px'));
+assert.ok(!section.includes('margin-top:48px'));
+console.log('PASS: cloud assets, seam clipping, action clearance, tap targets and separate closing art. Rendered acceptance pending.');

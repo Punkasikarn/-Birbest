@@ -1,0 +1,53 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const root = path.join(__dirname, '..');
+const read = name => fs.readFileSync(path.join(root, name), 'utf8');
+const control = () => ({events:{},attributes:{},addEventListener(k,fn){this.events[k]=fn;},setAttribute(k,v){this.attributes[k]=v;},focus(){}});
+let section, handler;
+const dialogParts = Object.fromEntries(['.product-full','.product-caption','.product-counter','[data-close]','[data-prev]','[data-next]'].map(k=>[k,control()]));
+const dialog = {...control(),querySelector:s=>dialogParts[s],showModal(){this.open=true;},close(){this.open=false;this.events.close();}};
+const context = {window:{addEventListener(k,fn){if(k==='hashchange')handler=fn;}},document:{querySelector:s=>s==='#shop-hat-gallery'?section:null,createElement:()=>dialog,body:{append(){}}}};
+vm.createContext(context);
+for(const file of ['crochet-data.js','hat-data.js','crochet-catalog.js','home-products.js']) vm.runInContext(read(file),context);
+const api = context.window.BirbestCrochet;
+const hats = context.window.BirbestHatProducts;
+assert.equal(hats.length,2);
+assert.equal(api.filterItems('','').length,56);
+assert.equal(api.filterItems('หมวก','').length,2);
+assert.equal(api.filterItems('ค็อกคาเทล','หมวก').length,1);
+assert.equal(api.filterItems('พวงกุญแจ','หมวก').length,0);
+assert.equal(api.filterItems('','')[0].slug,'daily-pack');
+const flow = read('flow.js');
+const branch = flow.slice(flow.indexOf('    const hatProduct ='),flow.indexOf('    const crochetProduct ='));
+for(const p of hats){
+  assert.equal(p.price,559);
+  assert.equal((api.card(p).match(/<img /g)||[]).length,1);
+  assert.ok(api.card(p).includes('559 บาท'));
+  for(const shot of p.shots){
+    const bytes = fs.readFileSync(path.join(root,'assets',shot.file));
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),shot.sha256);
+  }
+  const routeContext={route:'shop/'+p.slug,window:{BirbestHatProducts:hats,scrollTo(){}},view:{focus(){}},document:{},heading:t=>t,esc:s=>s};
+  vm.runInNewContext('(function(){'+branch+'})()',routeContext);
+  assert.ok(routeContext.view.innerHTML.includes('data-product="'+p.slug+'"'));
+  const controls=Object.fromEntries(['[data-main-photo]','[data-main-image]','[data-image-count]'].map(k=>[k,control()]));
+  const thumbs=p.shots.map((_,i)=>({...control(),dataset:{thumbnail:String(i)}}));
+  section={dataset:{product:p.slug},querySelector:s=>controls[s],querySelectorAll:()=>thumbs};
+  handler();
+  assert.ok(section.innerHTML.includes('559 บาท'));
+  assert.ok(section.innerHTML.includes('https://birbest.etsy.com/'));
+  assert.ok(section.innerHTML.includes('https://shopee.co.th/birbest.official'));
+  thumbs.forEach((t,i)=>{t.events.click();assert.equal(controls['[data-main-image]'].src,'assets/'+p.shots[i].file);});
+  controls['[data-main-photo]'].events.click();
+  assert.equal(dialog.open,true);
+  dialogParts['[data-next]'].events.click();
+  assert.equal(dialogParts['.product-full'].src,'assets/'+p.shots[0].file);
+  dialogParts['[data-close]'].events.click();
+  assert.equal(dialog.open,false);
+}
+assert.equal(hats.reduce((n,p)=>n+p.shots.length,0),12);
+assert.ok(read('index.html').indexOf('src="hat-data.js"')<read('index.html').indexOf('src="crochet-catalog.js"'));
+console.log('PASS: two hats, 559 THB, 12 original assets, catalog/filter/routes/galleries/lightbox/channels. Browser rendering pending.');

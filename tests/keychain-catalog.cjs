@@ -1,0 +1,51 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const crypto = require('node:crypto');
+const root = path.join(__dirname, '..');
+const read = name => fs.readFileSync(path.join(root, name), 'utf8');
+const control = () => ({events:{},addEventListener(k,fn){this.events[k]=fn;},setAttribute(){},focus(){}});
+let section, handler;
+const parts = Object.fromEntries(['.product-full','.product-caption','.product-counter','[data-close]','[data-prev]','[data-next]'].map(k=>[k,control()]));
+const dialog = {...control(),querySelector:s=>parts[s],showModal(){this.open=true;},close(){this.open=false;this.events.close();}};
+const context = {window:{addEventListener(k,fn){if(k==='hashchange')handler=fn;}},document:{querySelector:s=>s==='#shop-keychain-gallery'?section:null,createElement:()=>dialog,body:{append(){}}}};
+vm.createContext(context);
+for(const f of ['crochet-data.js','hat-data.js','sticker-data.js','keychain-data.js','crochet-catalog.js','home-products.js']) vm.runInContext(read(f),context);
+const api = context.window.BirbestCrochet;
+const keychains = context.window.BirbestKeychainProducts;
+assert.equal(keychains.length,8);
+assert.equal(api.filterItems('','').length,70);
+assert.equal(api.filterItems('','พวงกุญแจภาพนก').length,8);
+assert.equal(api.filterItems('AS01','').length,1);
+assert.equal(api.filterItems('ซันคอนัวร์','พวงกุญแจภาพนก').length,8);
+assert.equal(api.filterItems('โครเชต์','พวงกุญแจภาพนก').length,0);
+assert.equal(api.filterItems('','')[0].slug,'daily-pack');
+const flow = read('flow.js');
+const branch = flow.slice(flow.indexOf('    const keychainProduct ='),flow.indexOf('    const stickerProduct ='));
+for(const p of keychains){
+  assert.equal(p.price,249);
+  assert.equal((api.card(p).match(/<img /g)||[]).length,1);
+  assert.ok(api.card(p).includes('249 บาท'));
+  for(const shot of p.shots){
+    assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'assets',shot.file))).digest('hex'),shot.sha256);
+  }
+  const routeContext={route:'shop/'+p.slug,window:{BirbestKeychainProducts:keychains,scrollTo(){}},view:{focus(){}},document:{},heading:t=>t,esc:s=>s};
+  vm.runInNewContext('(function(){'+branch+'})()',routeContext);
+  assert.ok(routeContext.view.innerHTML.includes('data-product="'+p.slug+'"'));
+  const controls=Object.fromEntries(['[data-main-photo]','[data-main-image]','[data-image-count]'].map(k=>[k,control()]));
+  const thumbs=p.shots.map((_,i)=>({...control(),dataset:{thumbnail:String(i)}}));
+  section={dataset:{product:p.slug},querySelector:s=>controls[s],querySelectorAll:()=>thumbs};
+  handler();
+  assert.ok(section.innerHTML.includes('249 บาท'));
+  assert.ok(section.innerHTML.includes('ไม่ใช่ชุดรวม 8 ชิ้น'));
+  assert.ok(section.innerHTML.includes('https://birbest.etsy.com/'));
+  thumbs.forEach((t,i)=>{t.events.click();assert.equal(controls['[data-main-image]'].src,'assets/'+p.shots[i].file);});
+  controls['[data-main-photo]'].events.click();
+  assert.equal(dialog.open,true);
+  parts['[data-next]'].events.click();
+  assert.equal(parts['.product-full'].src,'assets/'+p.shots[0].file);
+  parts['[data-close]'].events.click();
+  assert.equal(dialog.open,false);
+}
+console.log('PASS: eight keychain designs, 249 THB, images, filters, detail routes, galleries and lightbox. Browser rendering pending.');
