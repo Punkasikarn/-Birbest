@@ -1,0 +1,198 @@
+{
+  "products": 53,
+  "usedImages": 210,
+  "excluded": [
+    {
+      "index": 3,
+      "source": "01_Parrot/African Grey/th-11134207-7r98u-lzs649vbvu6988.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 8,
+      "source": "01_Parrot/Alexandrine/th-11134207-81ztp-meimhrq67wua5b.jfif",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "index": 18,
+      "source": "01_Parrot/Budgie/th-11134207-7r98v-lxsp4hnxg3hs64.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 27,
+      "source": "01_Parrot/Caique/th-11134207-7r98t-lyfnoxkl9q4h62 (1).jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 28,
+      "source": "01_Parrot/Cockatiel/th-11134207-7r98o-lyyu0ix8m2ehc6.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 70,
+      "source": "01_Parrot/Cockatoo/th-11134207-7r98r-lzdfo2p4zlvlcc.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 91,
+      "source": "01_Parrot/Conure/Greencheek/Crimson/th-11134207-7ras8-m2guwj7n5fokff.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 100,
+      "source": "01_Parrot/Conure/Greencheek/th-11134207-7r98v-lyqej10lp9k938.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 103,
+      "source": "01_Parrot/Conure/Sunconure/0103.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 126,
+      "source": "01_Parrot/Eclectus/th-11134207-7r991-lz6clipj0xohdb (1).jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 130,
+      "source": "01_Parrot/Forpus/th-11134207-7r98z-lyv0v5uyy6y1c7.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 144,
+      "source": "01_Parrot/Lovebird/th-11134207-7r98x-lzc5qqltebah4b.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 158,
+      "source": "01_Parrot/Macaw/Hyacinth/th-11134207-7r98v-lyw3mh9c8m0x1c.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 162,
+      "source": "01_Parrot/Macaw/Scarlet/th-11134207-7r991-ly2gjf6ki4lrb2.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 164,
+      "source": "01_Parrot/Macaw/th-11134207-7r98y-lyv0pte4lprd5f.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 165,
+      "source": "01_Parrot/Macaw/th-11134207-7ra0q-mcnrplj81r3a55.jfif",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "index": 174,
+      "source": "01_Parrot/Monk/th-11134207-7r98s-lzs5yunzji4h70.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 178,
+      "source": "01_Parrot/Rainbow Lorikeet/th-11134207-7r98z-lzs681lh858h7b.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 188,
+      "source": "01_Parrot/Ringneck/th-11134207-7r992-lzs6aorlztm1a4.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 196,
+      "source": "02_Feather/Chicken/th-11134207-7r98z-m09e65wy1u5434.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 200,
+      "source": "02_Feather/Crow/th-11134207-7r98z-m09e8paaca8o6a.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 207,
+      "source": "02_Feather/Duck/th-11134207-7rasm-m0ddqbzofvfc44 (1).jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 208,
+      "source": "02_Feather/Duck/th-11134207-7rasm-m0ddqbzofvfc44.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 209,
+      "source": "02_Feather/Enaga/th-11134207-7r98t-m0boqfq4adw8fe.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 216,
+      "source": "02_Feather/Flamingo/th-11134207-7rasf-m0h9yxybt4u2d8.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 218,
+      "source": "02_Feather/Owl/th-11134207-7rasb-m0gij2pfvut680.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 223,
+      "source": "02_Feather/Peacock/th-11134207-7rasg-m0n6eov9zsns2c.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 225,
+      "source": "02_Feather/Pigeon/th-11134207-7r98p-m09e65wy38pk27.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 231,
+      "source": "02_Feather/Sparrow/th-11134207-7rasg-m0eu9rqweg2g8d (1).jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 232,
+      "source": "02_Feather/Sparrow/th-11134207-7rasg-m0eu9rqweg2g8d.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 240,
+      "source": "02_Feather/Toucan/th-11134207-7rasj-m0m4bazmbra036.jfif",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "index": 241,
+      "source": "th-11134207-7ra0q-mcnrplj81r3a55.jfif",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

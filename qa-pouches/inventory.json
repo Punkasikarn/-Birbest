@@ -1,0 +1,464 @@
+[
+  {
+    "index": 0,
+    "source": "African Grey/th-11134207-7r98u-m028f5anweka39.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 1,
+    "source": "African Grey/th-11134207-7r98v-m028f53q7yl471.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 2,
+    "source": "African Grey/th-11134207-7r98x-m028f53q6jzu6a.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 3,
+    "source": "African Grey/th-11134207-7r98x-m028f53q6k0o1a.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 4,
+    "source": "African Grey/th-11134207-7r990-m028f53qm08q3c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 5,
+    "source": "Amazon/th-11134207-7r98r-m02yo0refba0b8.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 6,
+    "source": "Amazon/th-11134207-7r98u-m02yo0redwoq19.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 7,
+    "source": "Amazon/th-11134207-7r98v-m02yo0redwpkbc.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 8,
+    "source": "Amazon/th-11134207-7r98w-m02yo0rodi2i83.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 9,
+    "source": "Amazon/th-11134207-7r98x-m02yo0refb969b.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 10,
+    "source": "Budgie/Blue/th-11134207-7r98o-lzvwzj6svrltf4.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 11,
+    "source": "Budgie/Blue/th-11134207-7r98o-lzvx34kvhu3t58.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 12,
+    "source": "Budgie/Blue/th-11134207-7r98q-lzvx34kvxacpe0.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 13,
+    "source": "Budgie/Blue/th-11134207-7r98y-lzvwzj5oxe3t03.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 14,
+    "source": "Budgie/Blue/th-11134207-7r992-lzvwzj5oxe2p86.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 15,
+    "source": "Budgie/Purple/th-11134207-7ras8-m18ldhjz9583a5.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 16,
+    "source": "Budgie/Purple/th-11134207-7ras8-m18ldhk041pv00.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 17,
+    "source": "Budgie/Purple/th-11134207-7rasc-m18ldhjz957zf0.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 18,
+    "source": "Budgie/Purple/th-11134207-7rasd-m18ldhkj8bznc5.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 19,
+    "source": "Budgie/Purple/th-11134207-7rasm-m18ldhjzolgzb5.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 20,
+    "source": "Cockatiel/th-11134207-7r98o-lzt928wvmhm198.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 21,
+    "source": "Cockatiel/th-11134207-7r98r-lzt928wvl30ha1.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 22,
+    "source": "Cockatiel/th-11134207-7r98s-lzt928xfk9s126.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 23,
+    "source": "Cockatiel/th-11134207-7r98t-lzt928wvmhkx62.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 24,
+    "source": "Cockatiel/th-11134207-7r98v-lzt928wvl31l0f.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 25,
+    "source": "Cockatoo/th-11134207-7ras8-m15t8d0784s43a.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 26,
+    "source": "Cockatoo/th-11134207-7ras8-m15t8d0h7q5w9c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 27,
+    "source": "Cockatoo/th-11134207-7rasc-m15t8d4ya6gk1d.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 28,
+    "source": "Cockatoo/th-11134207-7rasl-m15t8cyta5v852.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 29,
+    "source": "Cockatoo/th-11134207-7rasl-m15t8cytbkfo8c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 30,
+    "source": "Forpus/th-11134207-7rasb-m1x9yygti3xlf2.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 31,
+    "source": "Forpus/th-11134207-7rasd-m1x9yygjij1zd9.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 32,
+    "source": "Forpus/th-11134207-7rase-m1x9yygttch5f7.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 33,
+    "source": "Forpus/th-11134207-7rash-m1x9yyh3hptj91.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 34,
+    "source": "Forpus/th-11134207-7rasl-m1x9yyk5d8ix4a.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 35,
+    "source": "Galah Cockatoo/th-11134207-7r98r-lzz5jpwsubgh03.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 36,
+    "source": "Galah Cockatoo/th-11134207-7r98s-lzz5jpvyvjc9e2.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 37,
+    "source": "Galah Cockatoo/th-11134207-7r98t-lzz5jpw8v4q1a5.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 38,
+    "source": "Galah Cockatoo/th-11134207-7r98x-lzz5jpvywxwpf5.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 39,
+    "source": "Galah Cockatoo/th-11134207-7r98z-lzz5jpvyvjb555.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 40,
+    "source": "Golden Conure/th-11134207-7rasb-m14fbycsw2o19e.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 41,
+    "source": "Golden Conure/th-11134207-7rasi-m14fbyegtmwk1d.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 42,
+    "source": "Golden Conure/th-11134207-7rasm-m14fbydcv9dg15.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 43,
+    "source": "Golden Conure/th-11134207-7rasm-m14fbyddapmc0b.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 44,
+    "source": "Golden Conure/th-11134207-7rasm-m14fbydmuur861 (1).jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 45,
+    "source": "Greencheek/th-11134207-7r98p-lzxe9r0426jt45.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 46,
+    "source": "Greencheek/th-11134207-7r98z-lzxe9r0426ipf2.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 47,
+    "source": "Greencheek/th-11134207-7r98z-lzxe9r17z5hde1.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 48,
+    "source": "Greencheek/th-11134207-7r990-lzxe9r040ry9c7.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 49,
+    "source": "Greencheek/th-11134207-7r992-lzxe9r04g8895d.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 50,
+    "source": "Major Michell Cockatoo/th-11134207-7rasa-m12wqaxklag852.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 51,
+    "source": "Major Michell Cockatoo/th-11134207-7rash-m12wqaxl0qp4b4.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 52,
+    "source": "Major Michell Cockatoo/th-11134207-7rash-m12wqaxl0qyha9.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 53,
+    "source": "Major Michell Cockatoo/th-11134207-7rasi-m12wqaxalpbt7b.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 54,
+    "source": "Major Michell Cockatoo/th-11134207-7rasm-m12wqaxklapl5c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 55,
+    "source": "Marcaw/Blue gold/th-11134207-7ras8-m1pj7rlbtrvt32.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 56,
+    "source": "Marcaw/Blue gold/th-11134207-7rasd-m1pj7rlc98mv0c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 57,
+    "source": "Marcaw/Blue gold/th-11134207-7rasi-m1pj7rlbtsdze4.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 58,
+    "source": "Marcaw/Blue gold/th-11134207-7rasj-m1pj7rlvsynd48.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 59,
+    "source": "Marcaw/Blue gold/th-11134207-7rasm-m1pj7rlbv6yfc7.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 60,
+    "source": "Marcaw/Scarlet/th-11134207-7r98o-m04rexuc9djs02.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 61,
+    "source": "Marcaw/Scarlet/th-11134207-7r98u-m04rexs3ud3s01.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 62,
+    "source": "Marcaw/Scarlet/th-11134207-7r98u-m04rexulqpiy48.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 63,
+    "source": "Marcaw/Scarlet/th-11134207-7r98z-m04rexubtxaw14.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 64,
+    "source": "Marcaw/Scarlet/th-11134207-7r992-m04rextrrxdmde.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 65,
+    "source": "Monk/th-11134207-7r98q-m004rpz2fgyx63.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 66,
+    "source": "Monk/th-11134207-7r98v-m004rpz2gvjd36.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 67,
+    "source": "Monk/th-11134207-7r990-m004rpz2fgxtb7.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 68,
+    "source": "Monk/th-11134207-7r990-m004rq6u43ope6.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 69,
+    "source": "Monk/th-11134207-7r991-m004rpzcf2cp39.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 70,
+    "source": "Sunconure/th-11134207-7r98o-lzvwzj5pbfs988.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 71,
+    "source": "Sunconure/th-11134207-7r98x-lzvwzj5pcucpe0.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 72,
+    "source": "Sunconure/th-11134207-7r98y-lzvwzj5ovzjd49.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 73,
+    "source": "Sunconure/th-11134207-7r990-lzvwzj5ovzi99c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 74,
+    "source": "Sunconure/th-11134207-7r992-lzvwzj6sud1d2c.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 75,
+    "source": "th-11134207-7r98x-lzs964mijfzd84.jfif",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "index": 76,
+    "source": "th-11134207-7rasb-m1x9yygjjxmf8b.jfif",
+    "width": 800,
+    "height": 800
+  }
+]
