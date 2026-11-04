@@ -1,0 +1,48 @@
+/* Role-based type scale. The illustrated hero logo and scene geometry stay intact. */
+:root{--type-page:2.5rem;--type-section:2rem;--type-card:1.375rem;--type-small-heading:1.125rem;--type-body:1rem;--type-action:.9375rem;--type-label:.8125rem}
+body{font-size:var(--type-body);line-height:1.8;letter-spacing:0}
+#home-view[data-chapters] .section-heading h2,
+#home-view[data-chapters] #home-shop .product-heading h2,
+#home-view[data-chapters] .chapter-closing h2{font-size:var(--type-section);font-weight:800;line-height:1.5;letter-spacing:0;overflow-wrap:anywhere;margin-top:10px;margin-bottom:16px}
+#home-view[data-chapters] #today .world-path h3,
+#home-view[data-chapters] #home-school .school-feature h3,
+#home-view[data-chapters] #little-story .story-journal h3,
+#home-view[data-chapters] #home-shop .shop-product-label h3{font-size:var(--type-card);font-weight:700;line-height:1.6;letter-spacing:0;overflow-wrap:anywhere}
+#home-view[data-chapters] #home-school .school-topics h3,
+#home-view[data-chapters] #wonder .quiz h3{font-size:var(--type-small-heading);line-height:1.65;font-weight:700}
+#home-view[data-chapters] #wonder h2{font-size:var(--type-card);line-height:1.6}
+#home-view[data-chapters] .section-heading>p:not(.eyebrow),
+#home-view[data-chapters] #today .world-path>p:not(.path-label),
+#home-view[data-chapters] #home-school .school-feature p:not(.path-label),
+#home-view[data-chapters] #little-story .story-journal p:not(.path-label),
+#home-view[data-chapters] #home-shop .product-heading p:not(.eyebrow),
+#home-view[data-chapters] .chapter-closing>p:not(.eyebrow){font-size:var(--type-body);line-height:1.85}
+#home-view[data-chapters] .section-heading .eyebrow,
+#home-view[data-chapters] #home-shop .product-heading .eyebrow,
+#home-view[data-chapters] .chapter-closing>.eyebrow,
+#home-view[data-chapters] #wonder .eyebrow,
+#home-view[data-chapters] #today .world-path .path-label,
+#home-view[data-chapters] #home-school .path-label,
+#home-view[data-chapters] #little-story .story-journal .path-label,
+#home-view[data-chapters] #home-shop .shop-product-label p{font-size:var(--type-label);line-height:1.65;font-weight:700;letter-spacing:0}
+#home-view[data-chapters] :is(#today,#friends,#home-school,#little-story,#home-shop,.chapter-closing) :is(.pill,.text-link,.route-link,.quiz-next,.school-species a){font-size:var(--type-action);line-height:1.65;min-height:48px;white-space:normal;overflow-wrap:anywhere}
+#home-view[data-chapters] #wonder :is(.quiz-option,.quiz-result,.quiz-host-speech){font-size:var(--type-action);line-height:1.8}
+#home-view[data-chapters] #wonder .quiz-meta{font-size:var(--type-label);line-height:1.65}
+#home-view[data-chapters] #home-shop .product-price{font-size:1.25rem;line-height:1.6}
+.route-view .route-heading h1{font-size:var(--type-page);line-height:1.4;letter-spacing:0;overflow-wrap:anywhere}
+.route-view .route-section h2,.route-view .route-body h2{font-size:1.5rem;line-height:1.6;overflow-wrap:anywhere}
+.route-view .route-card h2,.route-view .route-card h3,.route-view .shop-product-label h2{font-size:var(--type-card);line-height:1.6}
+.route-view .product-detail-info h2{font-size:1.75rem;line-height:1.5}
+.route-view .route-card p{font-size:var(--type-body);line-height:1.85}
+.route-view .breadcrumbs,.route-view .shop-product-label p{font-size:var(--type-label);line-height:1.65}
+@media(max-width:700px){
+  :root{--type-page:2rem;--type-section:1.625rem;--type-card:1.25rem;--type-small-heading:1.0625rem}
+  .route-view .product-detail-info h2{font-size:1.5rem}
+}
+/* English chapter labels support, rather than compete with, the Thai title. */
+#home-view[data-chapters] .section-heading .eyebrow,
+#home-view[data-chapters] #home-school .section-heading .eyebrow,
+#home-view[data-chapters] #little-story .section-heading .eyebrow,
+#home-view[data-chapters] #home-shop .product-heading .eyebrow,
+#home-view[data-chapters] .chapter-closing>.eyebrow,
+#home-view[data-chapters] #wonder .eyebrow{font-weight:500;color:#52665f;text-decoration-thickness:2px}

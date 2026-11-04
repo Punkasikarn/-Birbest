@@ -1,0 +1,23 @@
+/* Local chapter accents only: preserve artwork, cloud edges and scene geometry. */
+#home-view[data-chapters] #friends .text-link{background:#ffe34b;border-color:transparent;color:#202124;border-radius:6px;box-shadow:3px 3px 0 #ff80b7;min-height:48px}
+#home-view[data-chapters] #friends .pink .text-link{background:#ffab39;border-color:transparent;color:#202124;box-shadow:3px 3px 0 #39d4df}
+#home-view[data-chapters] #friends .text-link:hover{background:#ffe34b;box-shadow:1px 1px 0 #ff80b7}
+#home-view[data-chapters] #friends .pink .text-link:hover{background:#ffab39;box-shadow:1px 1px 0 #39d4df}
+#home-view[data-chapters] #home-school .section-heading .eyebrow{color:#202124;text-decoration:underline;text-decoration-color:#39d4df;text-decoration-thickness:4px;text-underline-offset:6px}
+#home-view[data-chapters] #home-school .school-feature{border-color:#c9e9e5}
+#home-view[data-chapters] #home-school .school-feature .path-label{color:#202124;border-left:5px solid #39d4df;padding-left:10px}
+#home-view[data-chapters] #home-school .school-feature .text-link{color:#202124;text-decoration:underline;text-decoration-color:#c3f532;text-decoration-thickness:4px;text-underline-offset:5px}
+#home-view[data-chapters] #home-school .school-species a{color:#202124;text-decoration:underline;text-decoration-color:#39d4df;text-decoration-thickness:3px;text-underline-offset:6px}
+#home-view[data-chapters] #home-school .school-species a:hover{ text-decoration-color:#c3f532}
+#home-view[data-chapters] #home-school .quiz-next{background:#39d4df;color:#202124;border:1px solid transparent;border-radius:6px;min-height:48px;box-shadow:3px 3px 0 #c3f532}
+#home-view[data-chapters] #little-story .section-heading .eyebrow{color:#202124;text-decoration:underline;text-decoration-color:#ff80b7;text-decoration-thickness:4px;text-underline-offset:6px}
+#home-view[data-chapters] #little-story .story-feature .path-label{color:#202124;border-left:5px solid #ff80b7;padding-left:10px}
+#home-view[data-chapters] #little-story .story-secondary .path-label{color:#202124;border-left:5px solid #ffe34b;padding-left:10px}
+#home-view[data-chapters] #little-story .story-journal .text-link{color:#202124;text-decoration:underline;text-decoration-color:#ff80b7;text-decoration-thickness:4px;text-underline-offset:5px}
+#home-view[data-chapters] #little-story .story-secondary .text-link{text-decoration-color:#ffe34b}
+#home-view[data-chapters] #little-story .chapter-actions .pill{background:#ff80b7;color:#202124;border:1px solid transparent;border-radius:6px;box-shadow:3px 3px 0 #ffe34b;min-height:48px}
+#home-view[data-chapters] #little-story .chapter-actions .route-link{color:#202124;text-decoration:underline;text-decoration-color:#ffe34b;text-decoration-thickness:4px;text-underline-offset:6px}
+#home-view[data-chapters] #friends .text-link:focus-visible,
+#home-view[data-chapters] #home-school a:focus-visible,
+#home-view[data-chapters] #home-school .quiz-next:focus-visible,
+#home-view[data-chapters] #little-story a:focus-visible{outline:3px solid #202124;outline-offset:5px}

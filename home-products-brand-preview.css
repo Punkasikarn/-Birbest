@@ -1,0 +1,39 @@
+/* Local brand-direction trial: only the Home product section. */
+#home-view[data-chapters] #home-shop[data-gallery]{
+  background:#fff;
+  color:#202124;
+  --chapter-edge:url('assets/transition-chapter-white.svg');
+}
+#home-shop .product-heading{align-items:center;gap:28px;margin-bottom:40px}
+#home-shop .product-heading h2{color:#202124;font-size:36px;line-height:1.4;font-weight:800;max-width:680px}
+#home-shop .product-heading .eyebrow{color:#202124;font-weight:800;font-size:12px}
+#home-shop .product-heading p:not(.eyebrow){color:#55565a}
+#home-shop .product-heading .pill{background:#39d4df;color:#172125;border-radius:6px;box-shadow:0 4px 0 #202124;padding:14px 22px;min-height:48px;max-width:100%;text-align:center}
+#home-shop .home-product-selection{gap:32px;grid-template-columns:minmax(0,1.25fr) repeat(2,minmax(0,1fr))}
+#home-shop .shop-product{--product-accent:#c3f532;color:#202124}
+#home-shop .shop-product:nth-child(2){--product-accent:#ff80b7}
+#home-shop .shop-product:nth-child(3){--product-accent:#ffab39}
+#home-shop .shop-product-art{background:#fff;border-radius:4px;box-shadow:none}
+#home-shop .shop-product-art img{object-fit:contain}
+#home-shop .shop-product-label{border-top:8px solid var(--product-accent);padding:20px 0 0;align-items:flex-start}
+#home-shop .shop-product-label p{color:#202124;font-size:12px;font-weight:800;margin-bottom:10px}
+#home-shop .shop-product-label h3{font-size:24px;font-weight:800;color:#202124}
+#home-shop .shop-product-label div>span{color:#55565a;font-size:14px}
+#home-shop .product-price{font-size:22px;color:#202124;margin-top:14px}
+#home-shop .shop-product-arrow{background:var(--product-accent);border:0;color:#202124;width:48px;height:48px;flex-basis:48px;border-radius:50%;transition:transform .2s ease}
+#home-shop .shop-product:focus-visible,#home-shop .pill:focus-visible{outline:3px solid #202124;outline-offset:6px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  #home-shop .shop-product:hover .shop-product-arrow{transform:translateX(4px)}
+}
+@media(max-width:900px){
+  #home-shop .home-product-selection{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
+}
+@media(max-width:700px){
+  #home-shop .product-heading{align-items:flex-start}
+  #home-shop .product-heading h2{font-size:28px}
+}
+@media(max-width:520px){
+  #home-shop .home-product-selection{grid-template-columns:1fr;gap:36px}
+  #home-shop .shop-product-label h3{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){#home-shop .shop-product-arrow{transition:none}}

@@ -1,0 +1,161 @@
+/* Only the chapters below the existing village cover are restyled. */
+#home-view[data-chapters] :is(.chapter-explore,.chapter-school,.home-story,.chapter-shop){padding:64px max(5%,calc((100% - 1240px)/2)) 96px;position:relative}
+#home-view[data-chapters] :is(.chapter-explore,.chapter-school,.home-story,.chapter-shop) .section-heading{max-width:760px;margin:0 auto 36px;text-align:center}
+#home-view[data-chapters] .section-heading h2{font-size:32px;line-height:1.5;letter-spacing:0;margin:8px 0}
+#home-view[data-chapters] .section-heading>p:last-child{font-size:16px;color:#4b675d;line-height:1.8}
+#home-view[data-chapters] #today{background:#fff;padding-bottom:100px}
+#home-view[data-chapters] #today::before{content:none}
+.world-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.world-path{display:flex;flex-direction:column;align-items:center;text-align:center;color:#234e45;text-decoration:none;min-width:0}
+.world-path img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:0;transition:transform .25s}
+.world-path:hover img{transform:translateY(-5px)}
+.path-label{font-size:12px;font-weight:800;letter-spacing:0;color:#58705b;margin:20px 0 6px}
+.world-path h3{font-size:24px;margin:0;line-height:1.5}
+.world-path>p:not(.path-label){font-size:16px;line-height:1.8;margin:10px 0 22px}
+.world-path .pill{margin-top:auto;min-height:44px;background:#fff2b1;color:#224e43}
+.world-path:nth-child(2) .pill{background:#f7ccd2}
+.world-path:nth-child(3) .pill{background:#c9e7ec}
+#home-view[data-chapters] #friends{background:#edf7ed;padding:52px max(5%,calc((100% - 1120px)/2)) 90px;position:relative}
+#home-view[data-chapters] #friends::before{content:'';position:absolute;left:0;right:0;top:-39px;height:40px;background:#edf7ed;border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
+#home-view[data-chapters] #friends .friend-grid{gap:48px;max-width:1100px}
+#home-view[data-chapters] #friends .friend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:0 8px}
+#home-view[data-chapters] #friends .friend-top{grid-column:1/-1;margin:0 0 8px}
+#home-view[data-chapters] #friends .portrait-button{padding:0 0 36px;width:100%}
+#home-view[data-chapters] #friends .friend-copy{text-align:left;padding:0 0 24px}
+#home-view[data-chapters] #friends .portrait-note{font-size:12px;bottom:0;left:0;right:0}
+.friend-facts{margin:16px 0;display:grid;gap:10px;font-size:14px}
+.friend-facts dt{color:#5e7567;font-size:12px}.friend-facts dd{margin:1px 0 0;font-weight:700}
+#home-view[data-chapters] .chapter-school{background:#fff;padding-bottom:100px}
+.chapter-school::before{content:'';position:absolute;top:-31px;left:0;right:0;height:32px;background:#fff;border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
+.school-journal{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);align-items:start;gap:28px}
+.school-reading{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;min-width:0}
+.school-feature,.school-topics a,.story-journal>a{display:block;text-decoration:none;color:#234e45;min-width:0}
+.school-feature{border:1px solid #dbe5df;border-radius:8px;overflow:hidden;align-self:start}
+.school-feature>img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.school-feature>div{padding:20px}.school-feature h3{font-size:21px;line-height:1.6;margin:6px 0}
+.school-feature .path-label{margin:0}.school-feature p:not(.path-label){font-size:15px;line-height:1.8}
+.school-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-content:start}
+.school-topics img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px;display:block}
+.school-topics h3{font-size:15px;line-height:1.6;margin:8px 0}
+.school-species{grid-column:1/-1;display:flex;gap:12px 24px;flex-wrap:wrap;font-size:14px;font-weight:700}
+.school-species a{padding:10px 0;text-underline-offset:5px}
+#home-view[data-chapters] #wonder{display:block;padding:22px;background:#f5faf8;border:1px solid #cfded6;border-radius:8px;min-width:0;scroll-margin-top:100px}
+#home-view[data-chapters] #wonder .wonder-intro{position:static}
+#home-view[data-chapters] #wonder h2{font-size:22px;line-height:1.5;margin:6px 0 14px}
+#home-view[data-chapters] #wonder .wonder-intro>p:not(.eyebrow),#home-view[data-chapters] #wonder .school-links,#home-view[data-chapters] #wonder .quiz-host-art{display:none}
+#home-view[data-chapters] #wonder .quiz-host{width:100%;margin:0;text-align:left;display:block}
+#home-view[data-chapters] #wonder .quiz-host-speech{min-height:0;font-size:14px;margin:0 0 18px}
+#home-view[data-chapters] #wonder .quiz{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+#home-view[data-chapters] #wonder .quiz h3{font-size:18px;margin:18px 0;line-height:1.7}
+#home-view[data-chapters] #wonder .quiz-option{padding:10px;font-size:14px;min-height:44px;gap:9px}
+#home-view[data-chapters] #wonder .quiz-next{white-space:normal;font-size:14px}
+#home-view[data-chapters] .home-story{background:#fff4f5;padding-top:48px}
+#home-view[data-chapters] .home-story::before{top:-39px;height:40px;filter:none;clip-path:none}
+.story-journal{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start}
+.story-journal>a{background:#fff;border:1px solid #ecd9de;border-radius:8px;overflow:hidden}
+.story-journal img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}
+.story-journal>a>div{padding:22px 24px}.story-journal .path-label{margin:0 0 8px}
+.story-journal h3{font-size:24px;line-height:1.5;margin:0 0 10px}.story-journal p{font-size:16px;line-height:1.8}
+.story-secondary{margin-top:32px}.story-journal .story-secondary h3{font-size:21px}
+.chapter-actions{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:28px}
+#home-view[data-chapters] .chapter-shop{background:#eaf6f8}
+.chapter-shop::before{content:'';position:absolute;top:-23px;left:0;right:0;height:24px;background:#eaf6f8;border-radius:50% 50% 0 0 / 100% 100% 0 0;pointer-events:none}
+.shop-editorial{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px;align-items:center}
+.shop-editorial h2{font-size:32px;line-height:1.5;margin:10px 0 18px}.shop-editorial p{font-size:16px;line-height:1.9;max-width:470px}
+.shop-editorial figure{margin:0}.shop-editorial img{display:block;width:100%;height:auto;border-radius:8px}
+.shop-editorial figcaption{font-size:12px;line-height:1.8;color:#58716a;margin-top:12px}
+.shop-note{margin-top:28px;border-top:1px solid #c2dcdf;padding-top:22px}.shop-note h3{font-size:21px;margin:0}.shop-note .footnote{font-size:13px;text-align:left}
+#home-view[data-chapters] .chapter-closing{min-height:600px;padding:44px 6% 320px;background:#b6e1f5 url('assets/about-two-friends-world-v1.webp') center 60% / cover no-repeat;color:#173f39;text-shadow:0 1px 8px #fff}
+.chapter-closing h2{font-size:32px;line-height:1.5;margin:8px 0}.chapter-closing>p:not(.eyebrow){max-width:440px;margin:10px auto 18px}
+.chapter-closing .pill{margin:4px;font-size:14px;white-space:normal;text-shadow:none}.chapter-closing .flock-link{background:#fff;color:#244f45}
+#home-view[data-chapters] :is(.world-path,.school-feature,.school-topics a,.story-journal a):focus-visible{outline:3px solid #26796a;outline-offset:5px}
+@media(max-width:1000px){
+  .school-journal{grid-template-columns:minmax(0,1fr)}
+  #home-view[data-chapters] #wonder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px}
+  #home-view[data-chapters] #friends .friend{grid-template-columns:minmax(0,1fr);text-align:center}
+  #home-view[data-chapters] #friends .friend-copy{text-align:center}.friend-facts{grid-template-columns:1fr 1fr}
+  #home-view[data-chapters] #friends .portrait-button{max-width:270px}
+  .shop-editorial{gap:28px}.world-paths{gap:20px}
+}
+@media(max-width:700px){
+  #home-view[data-chapters] :is(.chapter-explore,.chapter-school,.home-story,.chapter-shop){padding:40px 6% 72px}
+  #home-view[data-chapters] .section-heading h2,.shop-editorial h2{font-size:26px}
+  .world-paths{grid-template-columns:minmax(0,1fr);gap:40px;max-width:420px;margin:auto}
+  .world-path img{aspect-ratio:3/2}.world-path h3{font-size:22px}.world-path>p:not(.path-label){margin:8px 0 16px}
+  #home-view[data-chapters] #friends{padding:40px 6% 64px}
+  #home-view[data-chapters] #friends .friend-grid{grid-template-columns:minmax(0,1fr);gap:32px}
+  #home-view[data-chapters] #friends .friend-copy{padding-bottom:8px}
+  .school-reading{grid-template-columns:minmax(0,1fr)}.school-topics{gap:20px}
+  .school-feature>img{aspect-ratio:3/2}.school-species{gap:8px 20px}
+  #home-view[data-chapters] #wonder{display:block;padding:20px}.school-journal{gap:28px}
+  .story-journal,.shop-editorial{grid-template-columns:minmax(0,1fr);gap:24px}.story-secondary{margin-top:0}
+  .story-journal h3{font-size:22px}.chapter-actions{gap:18px}
+  #home-view[data-chapters] .chapter-closing{padding:32px 6% 360px;background-position:center bottom;background-size:auto 360px;min-height:680px}
+  .chapter-closing h2{font-size:28px}.chapter-closing .pill{display:table;margin:10px auto}
+}
+@media(prefers-reduced-motion:reduce){.world-path img{transition:none}.world-path:hover img{transform:none}}
+
+/* Keep cloud silhouettes and their shadows clear of the preceding actions.
+   The white Explore edge now joins the cover directly. */
+#home-view[data-chapters]{background:#fff}
+#home-view[data-chapters] .welcome-ribbon{display:none}
+/* Equal stacking levels let each later cloud paint over the previous chapter. */
+#home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing){position:relative;overflow:visible;isolation:isolate;z-index:1}
+#home-view[data-chapters] #today{--chapter-edge:url('assets/transition-chapter-white.svg');margin-top:0}
+#home-view[data-chapters] #friends{--chapter-edge:url('assets/transition-chapter-green.svg')}
+#home-view[data-chapters] .chapter-school{--chapter-edge:url('assets/transition-chapter-white.svg')}
+#home-view[data-chapters] .home-story{--chapter-edge:url('assets/transition-story.svg')}
+#home-view[data-chapters] .chapter-shop{--chapter-edge:url('assets/transition-chapter-blue.svg')}
+#home-view[data-chapters] .chapter-closing{--chapter-edge:url('assets/transition-chapter-sky.svg')}
+#home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing)::before{content:'';position:absolute;left:0;right:0;top:-71px;height:72px;border-radius:0;background:var(--chapter-edge) center bottom / 100% 100% no-repeat;filter:drop-shadow(0 -6px 7px #294a3f26);clip-path:inset(-32px 0 1px 0);pointer-events:none;z-index:0}
+#home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop){padding-bottom:128px}
+#home-view[data-chapters] :is(.chapter-explore,.chapter-friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing) :is(.pill,.route-link,.text-link,.quiz-next,.school-species a){box-sizing:border-box;min-height:48px;max-width:100%;display:inline-flex;align-items:center;justify-content:center;gap:8px;line-height:1.6;white-space:normal;overflow-wrap:anywhere;text-align:center}
+#home-view[data-chapters] :is(.chapter-actions,.school-species){gap:12px 20px}
+#home-view[data-chapters] :is(.chapter-actions,.shop-note) .route-link{padding:10px 8px}
+#home-view[data-chapters] :is(.chapter-explore,.chapter-friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing) :is(a,button):focus-visible{outline:3px solid #26796a;outline-offset:4px}
+/* Closing copy/actions precede the uncropped illustration, never overlay it. */
+#home-view[data-chapters] .chapter-closing{padding:40px 0 0;min-height:0;background:#b6e1f5;text-shadow:none;text-align:center}
+#home-view[data-chapters] .chapter-closing>:not(.pill){padding-left:6%;padding-right:6%;box-sizing:border-box}
+#home-view[data-chapters] .chapter-closing .pill{margin:8px;max-width:88%;padding:12px 22px}
+#home-view[data-chapters] .chapter-closing::after{content:'';display:block;width:100%;aspect-ratio:3/2;margin-top:28px;background:url('assets/about-two-friends-world-v1.webp') center / contain no-repeat;pointer-events:none}
+/* Fade only the sky edge into the section; keep the lower illustration opaque. */
+#home-view[data-chapters] .chapter-closing::after{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 3%,rgba(0,0,0,.5) 7%,rgba(0,0,0,.9) 12%,#000 17%);mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.12) 3%,rgba(0,0,0,.5) 7%,rgba(0,0,0,.9) 12%,#000 17%)}
+@media(max-width:700px){
+  #home-view[data-chapters] #today{margin-top:0}
+  #home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing)::before{top:-43px;height:44px;filter:drop-shadow(0 -4px 5px #294a3f26)}
+  #home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop){padding-bottom:96px}
+  #home-view[data-chapters] .chapter-actions{flex-direction:column;align-items:stretch;max-width:360px;margin:28px auto 0}
+  #home-view[data-chapters] .chapter-closing .pill{display:flex;width:fit-content;margin:12px auto}
+}
+
+/* Scene coordinates are width-based: branch and feet share one scale.
+   The scene occupies 50% of its width; labels sit in a separate row below. */
+#home-view[data-chapters] #friends .friend-grid{position:relative;isolation:isolate;container-type:inline-size;display:grid;grid-template-columns:20% 30% 30% 20%;align-items:start;gap:0;max-width:1120px;padding:50% 0 0}
+#home-view[data-chapters] #friends .friend-grid::before{content:'';position:absolute;z-index:-1;pointer-events:none;left:0;top:16.6667cqw;bottom:auto;width:100%;aspect-ratio:3/1;background:url('assets/home-friends-branch-20261019.webp') center / contain no-repeat}
+#home-view[data-chapters] #friends .friend{display:contents}
+#home-view[data-chapters] #friends .friend-top,#home-view[data-chapters] #friends .portrait-note{display:none}
+#home-view[data-chapters] #friends .portrait-button{position:absolute;max-width:none;margin:0;padding:0;border:0;background:transparent;overflow:visible;border-radius:0;line-height:0;z-index:1}
+/* Local anchor = the weight-bearing foot, not the bottom of transparent art. */
+#home-view[data-chapters] #friends .yellow .portrait-button{left:35%;top:34.7cqw;width:32%;transform:translate(-55.5%,-94.5%);transform-origin:55.5% 94.5%}
+#home-view[data-chapters] #friends .pink .portrait-button{left:65%;top:35.7cqw;width:34%;transform:translate(-55%,-93%);transform-origin:55% 93%}
+#home-view[data-chapters] #friends .portrait-button img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none}
+#home-view[data-chapters] #friends .friend-copy{grid-row:1;align-self:start;text-align:center;padding:12px 6px 0;position:relative;z-index:1}
+#home-view[data-chapters] #friends .yellow .friend-copy{grid-column:2}
+#home-view[data-chapters] #friends .pink .friend-copy{grid-column:3}
+#home-view[data-chapters] #friends .friend-copy>h3,
+#home-view[data-chapters] #friends .friend-copy>p{display:none}
+#home-view[data-chapters] #friends .friend-copy p{font-size:15px;line-height:1.8}
+#home-view[data-chapters] #friends .friend-facts{grid-template-columns:1fr}
+#home-view[data-chapters] #friends .text-link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;width:190px;max-width:100%;padding:12px 18px;margin:0;border:1px solid #c7dcc3;border-radius:999px;background:#dcecd2;color:#234e45;font-size:14px;font-weight:700;line-height:1.6;white-space:normal;box-shadow:none;transition:background .2s}
+#home-view[data-chapters] #friends .pink .text-link{background:#ffe598;border-color:#efd17c;box-shadow:none}
+#home-view[data-chapters] #friends .text-link:hover{background:#cce3bd}
+#home-view[data-chapters] #friends .pink .text-link:hover{background:#ffdc72}
+#home-view[data-chapters] #friends .text-link:focus-visible{outline:3px solid #26796a;outline-offset:5px}
+#home-view[data-chapters] #friends .footnote{margin:28px auto 0}
+@media(max-width:900px){
+  #home-view[data-chapters] #friends .friend-grid{grid-template-columns:10% 40% 40% 10%;gap:0;padding-top:50%;padding-bottom:0}
+  #home-view[data-chapters] #friends .yellow .portrait-button{left:30%;top:34.2cqw;width:39%}
+  #home-view[data-chapters] #friends .pink .portrait-button{left:70%;top:35.4cqw;width:40%}
+  #home-view[data-chapters] #friends .friend-copy{padding:8px 4px 0}
+  #home-view[data-chapters] #friends .text-link{font-size:13px;padding:10px;min-height:48px}
+}

@@ -1,0 +1,20 @@
+.species-stage { padding: 16px 0 40px; margin-bottom: 32px; border-bottom: 1px solid #dce6db; }
+.species-stage h2 { font-size: 28px; line-height: 1.5; scroll-margin-top: 110px; }
+.species-scene { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; margin: 24px 0; }
+.species-stage .learning-card { min-width: 0; }
+.species-stage .learning-card-copy { width: 100%; box-sizing: border-box; }
+.species-stage .learning-card-copy > span { display: block; margin-top: 12px; color: #436650; }
+.species-sources { margin-top: 40px; padding-top: 20px; border-top: 1px solid #dce6db; }
+.species-sources h2 { font-size: 20px; }
+.species-sources summary { cursor: pointer; padding: 12px 0; font-size: 18px; font-weight: 600; }
+.species-sources summary:focus-visible { outline: 2px solid #436650; outline-offset: 4px; }
+.species-question-group { margin: 32px 0; }
+.species-question-group h2 { font-size: 24px; line-height: 1.5; scroll-margin-top: 110px; overflow-wrap: anywhere; }
+.question-shortcuts a { min-height: 44px; white-space: normal; overflow-wrap: anywhere; }
+.question-shortcuts a[aria-current="location"] { border-bottom: 3px solid #436650; font-weight: 700; }
+.species-sources li { margin: 10px 0; overflow-wrap: anywhere; }
+.species-stage h3, .species-stage p { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .species-stage h2 { font-size: 24px; }
+  .species-stage .learning-cards { grid-template-columns: minmax(0, 1fr); }
+}

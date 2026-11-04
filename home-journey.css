@@ -1,0 +1,56 @@
+/* Home-only transitions keep route pages and the village composition intact. */
+#home-view .welcome-ribbon{position:relative;z-index:1;border:0;background:#e1efdf;padding:22px 6%;gap:20px}
+/* Broad unequal lobes create a paper-cloud edge instead of small scallops. */
+#home-view .welcome-ribbon::before{content:'';position:absolute;left:0;right:0;top:-79px;height:80px;background:url('assets/transition-cover.svg') center bottom / 100% 100% no-repeat;filter:drop-shadow(0 -8px 8px #294a3f30);pointer-events:none}
+#home-view .layered-village .scene-caption{bottom:98px}
+#home-view #friends{position:relative;background:#e1efdf;padding-top:48px;padding-bottom:160px}
+#home-view #friends .section-heading{max-width:700px;margin:0 auto 28px}
+#home-view #friends .friend-grid{max-width:1000px;margin:auto;gap:48px}
+#home-view #friends .friend{display:block;background:transparent;border:0;border-radius:0;overflow:visible}
+#home-view #friends .friend-top{justify-content:center;padding:0;gap:12px}
+#home-view #friends .number{display:none}
+#home-view #friends .tiny-tag{border:0;padding:0;font-size:14px;color:#456451}
+#home-view #friends .portrait-button{max-width:380px;margin:auto;padding:20px 20px 48px}
+#home-view #friends .portrait-button img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+#home-view #friends .portrait-note{left:5%;right:5%;bottom:8px;padding:6px 12px;font-size:14px}
+#home-view #friends .friend-copy{padding:10px 8px 20px}
+#home-view #friends .friend-copy h3{font-size:28px}
+#home-view #friends .friend-copy p{font-size:16px}
+#home-view #friends .footnote{max-width:640px;margin:24px auto 0}
+#home-view .home-story{position:relative;background:#fff4f5;padding-top:38px;padding-bottom:136px}
+/* The shadow follows the transparent curve, not a rectangular section box. */
+#home-view .home-story::before,#home-view #today::before{content:'';position:absolute;left:0;right:0;top:-95px;height:96px;background:url('assets/transition-story.svg') center bottom / 100% 100% no-repeat;filter:drop-shadow(0 -7px 7px #394d3d26);pointer-events:none}
+#home-view #today::before{background-image:url('assets/transition-garden.svg');filter:drop-shadow(0 -6px 7px #72515b21)}
+/* Each curve overlaps its section by 1px. Hide the rectangular base shadow
+   at that join while preserving the shadow above the curved silhouette. */
+#home-view .welcome-ribbon::before,
+#home-view .home-story::before,
+#home-view #today::before{clip-path:inset(-40px 0 1px 0)}
+#home-view .home-story .section-heading{max-width:720px;margin:0 auto 32px}
+#home-view .home-story h2{margin:6px 0 12px}
+.story-peek{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1100px;margin:auto}
+.story-peek figure{min-width:0;margin:0;background:#fff;border:1px solid #e5cfd4;border-radius:8px;overflow:hidden}
+.story-peek img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.story-peek figcaption{display:flex;align-items:baseline;gap:16px;padding:20px 24px 24px}
+.peek-number{font-size:14px;font-weight:700;color:#98566b;flex:none}
+.story-peek h3{font-size:21px;line-height:1.5;margin:0 0 6px}
+.story-peek p{font-size:16px;line-height:1.8;margin:0;color:#465f52}
+.story-peek-actions{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
+.story-peek-actions .pill{min-height:48px;white-space:normal;text-align:center}
+.story-keepsake{text-align:center;margin:28px 0 0;font-size:14px}
+#home-view #today{position:relative;background:#fffefa;padding-top:40px;padding-bottom:64px}
+#home-view #today>h2,#home-view #today>.eyebrow{text-align:center}
+@media(max-width:700px){
+  #home-view .welcome-ribbon::before{top:-47px;height:48px;filter:drop-shadow(0 -5px 5px #294a3f2b)}
+  #home-view #friends{padding-top:36px;padding-bottom:112px}
+  #home-view #friends .friend-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  #home-view #friends .portrait-button{max-width:300px}
+  #home-view #friends .section-heading h2{font-size:28px}
+  #home-view .home-story{padding-top:28px;padding-bottom:104px}
+  #home-view .home-story::before,#home-view #today::before{top:-55px;height:56px;filter:drop-shadow(0 -4px 4px #394d3d21)}
+  .story-peek{grid-template-columns:minmax(0,1fr);gap:20px}
+  .story-peek figcaption{padding:16px 18px 20px;gap:12px}
+  .story-peek-actions{gap:18px;flex-direction:column}
+  #home-view .welcome-ribbon span:nth-of-type(n+3),#home-view .welcome-ribbon i{display:none}
+  #home-view .welcome-ribbon{gap:8px 20px;font-size:12px}
+}

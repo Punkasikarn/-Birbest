@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Zyzol';
+  src: url('assets/fonts/Zyzol.otf') format('opentype');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zyzol';
+  src: url('assets/fonts/Zyzol-Bold.otf') format('opentype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zyzol Shadow';
+  src: url('assets/fonts/Zyzol-Shadow.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zyzol Round';
+  src: url('assets/fonts/Zyzol-Round.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zyzol Outline';
+  src: url('assets/fonts/Zyzol-Outline.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Zyzol', Tahoma, sans-serif;
+  font-synthesis: none;
+}
+.brand, .hero h1 {
+  font-family: 'Zyzol Shadow', Tahoma, sans-serif;
+  font-weight: 400;
+  text-shadow: none;
+}
+.brand small {
+  font-family: 'Zyzol', Tahoma, sans-serif;
+  font-weight: 700;
+}
+.brand-spark { font-family: Arial, sans-serif; }
+
+/* Display the original logo's painted area without its transparent canvas margins. */
+.rainbow-logo {
+  display: block;
+  position: relative;
+  width: 190px;
+  aspect-ratio: 2497 / 698;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.rainbow-logo img {
+  position: absolute;
+  width: 110.37245%;
+  max-width: none;
+  height: auto;
+  left: -5.12615%;
+  top: -202.148997%;
+}
+.hero h1 .rainbow-logo {
+  width: 480px;
+  max-width: 100%;
+  margin: 22px auto;
+  filter: none;
+}
+.hero { overflow: clip; }
+.hero-copy { isolation: isolate; }
+.hero h1 {
+  position: relative;
+  transform: translateY(var(--cloud-rise, 0px));
+  opacity: var(--cloud-opacity, 1);
+}
+.hero h1::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 760px;
+  height: 240px;
+  left: 50%;
+  top: 50%;
+  background: url('assets/hero-cloud.webp') center / 100% 100% no-repeat;
+  transform: translate(-50%, -50%);
+}
+.hero .hero-tagline,
+.hero .hero-note {
+  position: relative;
+  color: #163e35;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 5px #fffffff0;
+  text-shadow: 0 0 9px #fff, 0 0 18px #fff;
+}
+.hero .hero-tagline { line-height: 1.5; }
+.hero .hero-note { font-size: 18px; font-weight: 600; line-height: 1.8; }
+@media (max-width: 600px) {
+  .hero h1::before { width: 430px; height: 160px; }
+  .hero .hero-note { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 { transform: none; opacity: 1; }
+}
+footer .rainbow-logo { width: 160px; }
+@media (max-width: 600px) {
+  .site-header .rainbow-logo { width: 165px; }
+  .hero h1 .rainbow-logo { width: 290px; margin: 20px auto; }
+}

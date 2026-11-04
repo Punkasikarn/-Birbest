@@ -1,0 +1,38 @@
+/* The scene holds during native scrolling; the original city art is unchanged. */
+/* Sticky travel belongs inside the containing content box, not bottom padding. */
+#home-view .cloud-journey{position:relative;height:calc(var(--scene-height,100svh) + 70svh);padding-bottom:0}
+/* The next chapter enters over the last 40% of the cloud-opening journey.
+   Use the actual section edge, not a second decorative cloud or a moving link. */
+#home-view[data-chapters][data-motion='playing'] #today{margin-top:-28svh;position:relative;z-index:1}
+/* Overlap the clipped SVG base by two pixels to cover subpixel raster seams. */
+#home-view[data-chapters][data-motion] #today::before{top:-69px;height:72px}
+@media(max-width:700px){
+  #home-view[data-chapters][data-motion] #today::before{top:-41px;height:44px}
+}
+#home-view .cloud-enter{opacity:var(--enter-opacity,1)}
+#home-view .cloud-journey .hero{position:sticky;top:min(0px,calc(100svh - var(--scene-height,100svh)));overflow:hidden}
+#home-view .cloud-journey .hero .hero-copy{top:36%;opacity:var(--brand-opacity,1);transform:translateY(calc(-50% + var(--brand-rise,0px)))}
+#home-view .cloud-journey .opening-cloud{animation:none!important;visibility:visible;opacity:var(--reveal-opacity,1)}
+#home-view .cloud-journey .opening-cloud.left{transform:translateX(calc(-1 * var(--reveal-shift,0%)))}
+#home-view .cloud-journey .opening-cloud.right{transform:translateX(var(--reveal-shift,0%)) scaleX(-1)}
+/* Four banks surround a clear central sky opening instead of tall curtains. */
+#home-view .cloud-journey .opening-cloud.left,#home-view .cloud-journey .opening-cloud.right{top:40%;height:72%;width:100%;object-fit:fill}
+#home-view .cloud-journey .opening-cloud.left{left:-38%}
+#home-view .cloud-journey .opening-cloud.right{right:-38%}
+#home-view .cloud-journey .opening-cloud.upper-left,#home-view .cloud-journey .opening-cloud.upper-right{top:-24%;height:70%;width:88%;object-fit:fill}
+#home-view .cloud-journey .opening-cloud.upper-left{left:-43%;transform:translateX(calc(-1 * var(--reveal-shift,0%))) rotate(-24deg)}
+#home-view .cloud-journey .opening-cloud.upper-right{right:-43%;transform:translateX(var(--reveal-shift,0%)) rotate(24deg) scaleX(-1)}
+.site-header[data-cloud-nav]{position:fixed;top:0;left:0;right:0;z-index:20;transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .4s,visibility .4s;background:#fffefa}
+.site-header[data-cloud-nav='hidden']{transform:translateY(-105%);opacity:0;visibility:hidden;pointer-events:none}
+.site-header[data-cloud-nav='visible']{transform:translateY(0);opacity:1;visibility:visible}
+#home-view .cloud-enter{position:absolute;z-index:5;bottom:16%;left:50%;transform:translateX(-50%);min-height:48px;padding:12px 24px;border:1px solid #d4e1d9;border-radius:999px;background:#fff;color:#294a3f;font-weight:700;box-shadow:0 4px 20px #294a3f1a;cursor:pointer}
+#home-view[data-motion='paused'] .cloud-journey{height:auto;padding-bottom:0}
+#home-view[data-motion='paused'] .cloud-journey .hero{position:relative;top:auto}
+#home-view[data-motion='paused'] .cloud-enter{display:none}
+@media(prefers-reduced-motion:reduce){
+  #home-view[data-chapters][data-motion='playing'] #today{margin-top:0}
+  .site-header[data-cloud-nav]{transition:none}
+  #home-view .cloud-journey{height:auto;padding-bottom:0}
+  #home-view .cloud-journey .hero{position:relative;top:auto}
+  #home-view .cloud-journey .opening-cloud,#home-view .cloud-enter{display:none}
+}

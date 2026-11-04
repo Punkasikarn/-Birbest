@@ -1,0 +1,19 @@
+/* Only artwork moves; navigation targets and reading surfaces stay still. */
+#home-view[data-motion] .motion-toggle{position:relative;z-index:2;display:block;margin:20px auto 0;min-height:44px;padding:8px 16px;border:1px solid #d5e3db;border-radius:24px;background:#fff;color:#294a3f;font-size:13px;cursor:pointer}
+#home-view[data-motion] #today::before{transform:scaleY(var(--cloud-arrival,1));transform-origin:center bottom}
+#home-view[data-motion='playing'] #friends .portrait-button img{transform-origin:55% 94%;transition:rotate .45s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover) and (pointer:fine){
+  #home-view[data-motion='playing'] #friends .yellow .portrait-button:hover img{rotate:-3deg}
+  #home-view[data-motion='playing'] #friends .pink .portrait-button:hover img{rotate:3deg}
+  #home-view[data-motion='playing'] .world-path:hover img{rotate:-1deg}
+}
+#home-view[data-motion='playing'] #friends .portrait-button:focus-visible img{rotate:-2deg}
+#home-view[data-motion] :is(.pill,.text-link,.route-link){transition:background-color .2s,box-shadow .2s}
+#home-view[data-motion] :is(.pill,.text-link,.route-link):active{box-shadow:inset 0 0 0 2px #294a3f33}
+#home-view[data-motion='paused'] *,#home-view[data-motion='paused'] *::before,#home-view[data-motion='paused'] *::after{animation-play-state:paused!important;transition:none!important}
+#home-view[data-motion='paused'] .opening-cloud{display:none}
+#home-view[data-motion='paused'] .hero-copy{opacity:1;transform:translateY(-50%)}
+@media(prefers-reduced-motion:reduce){
+  #home-view[data-motion] #today::before{transform:none}
+  #home-view[data-motion] #friends .portrait-button img{rotate:none!important;transition:none}
+}

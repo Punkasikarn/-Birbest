@@ -1,0 +1,17 @@
+.shop-catalog[data-expanded]{display:block}
+.shop-tools{display:flex;align-items:end;gap:20px;flex-wrap:wrap;padding:0 0 16px;border-bottom:1px solid #dce5e1}
+.shop-tools label{display:grid;gap:8px;flex:1 1 240px;min-width:0;font-size:14px;font-weight:700}
+.shop-tools input,.shop-tools select{width:100%;min-width:0;min-height:48px;padding:10px 14px;font:inherit;font-size:16px;color:#202124;background:#fff;border:1px solid #8da99c;border-radius:6px}
+.shop-tools :is(input,select):focus-visible{outline:3px solid #34765c;outline-offset:3px}
+.shop-count{font-size:14px;color:#52665f;margin:20px 0}
+.crochet-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
+.crochet-grid .shop-product-label{align-items:start}
+.crochet-grid .shop-product-label h2{font-size:20px;line-height:1.6}
+.shop-empty{text-align:center;padding:36px 0}
+#shop-crochet-gallery .product-thumbnails{grid-template-columns:repeat(auto-fill,minmax(60px,1fr))}
+@media(max-width:850px){.crochet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.crochet-grid{grid-template-columns:minmax(0,1fr);gap:28px}.shop-tools{gap:14px}.shop-tools label{flex-basis:100%}}
+.shirt-size-table { max-width: 100%; overflow-x: auto; margin: 16px 0; }
+.shirt-size-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.shirt-size-table th, .shirt-size-table td { padding: 10px 6px; border-bottom: 1px solid #d8e4df; text-align: center; white-space: nowrap; }
+.shirt-size-table thead { background: #eef8f4; }
