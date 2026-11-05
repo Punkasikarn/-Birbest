@@ -21,6 +21,13 @@
   skip.className = 'cloud-enter';
   skip.textContent = 'เข้าเมือง ↓';
   hero.append(skip);
+  // Keep the phone seam in the city's own clipped layer, not above a sibling.
+  const edge = document.createElement('img');
+  edge.className = 'city-cloud-edge';
+  edge.src = 'assets/transition-chapter-white.svg';
+  edge.alt = '';
+  edge.setAttribute('aria-hidden', 'true');
+  hero.append(edge);
   let frame = 0;
   let focused = false;
   const progress = (top, travel) => Math.max(0, Math.min(1, -top / Math.max(1, travel)));

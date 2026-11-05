@@ -1,4 +1,5 @@
 /* The scene holds during native scrolling; the original city art is unchanged. */
+.city-cloud-edge{display:none}
 /* Sticky travel belongs inside the containing content box, not bottom padding. */
 #home-view .cloud-journey{position:relative;height:calc(var(--scene-height,100svh) + 70svh);padding-bottom:0}
 /* The next chapter enters over the last 40% of the cloud-opening journey.
@@ -48,6 +49,8 @@
 @media(max-width:600px){
   #home-view .cloud-journey .hero .hero-copy{top:48%}
   #home-view .cloud-journey .hero h1 .rainbow-logo{width:min(320px,100%)}
+  #home-view .cloud-journey .city-cloud-edge{display:block;position:absolute;left:0;bottom:-2px;width:100%;height:58px;max-width:none;z-index:6;pointer-events:none;object-fit:fill}
+  #home-view[data-chapters][data-motion] #today::before{content:none;display:none}
   #home-view .cloud-journey .opening-cloud.upper-left,
   #home-view .cloud-journey .opening-cloud.upper-right{top:-18%;height:58%;width:110%;object-fit:fill}
   #home-view .cloud-journey .opening-cloud.upper-left{left:-48%}
