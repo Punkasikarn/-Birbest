@@ -6,7 +6,7 @@
     const [name,url] = Array.isArray(source) ? source : [source.name,source.url];
     return /^https:\/\//.test(url || '') ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(name || 'แหล่งข้อมูลอ่านต่อ')}</a>` : '';
   };
-  const review = '<p class="footnote">บทเรียนฉบับร่าง · รอตรวจบทเรียบเรียงโดยสัตวแพทย์ ใช้ประกอบการเรียนรู้ ไม่แทนคำแนะนำเฉพาะตัว</p>';
+  const review = '<p class="footnote">ข้อมูลเพื่อการเรียนรู้ · บทเรียบเรียงยังรอตรวจโดยสัตวแพทย์ ไม่แทนคำแนะนำเฉพาะตัว</p>';
   function render(catalog, speciesId, lessonId = '', section = '', questionGroup = '') {
     const species = catalog.getSpecies(speciesId);
     const groups = catalog.getCurriculum(speciesId);
