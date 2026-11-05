@@ -13,17 +13,28 @@
 @media(max-width:600px){
   #home-view .cloud-journey{height:calc(var(--scene-height,100svh) + 40svh)}
   #home-view .cloud-journey .hero.layered-village{height:100svh;min-height:540px;padding-top:0;top:0}
-  #home-view .cloud-journey .village-stage{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;background-size:cover;background-position:center bottom}
+  #home-view .cloud-journey .village-stage{position:absolute;inset:auto;bottom:0;left:50%;width:max(100%,150svh,810px);height:100%;aspect-ratio:3/2;transform:translateX(-50%);background-size:100% 100%;background-position:center bottom}
+  #home-view .cloud-journey .mascot-spot{width:12%;bottom:18%}
+  #home-view .cloud-journey .spot-millet{left:37%}
+  #home-view .cloud-journey .spot-sunny{left:51%;width:13%}
+  #home-view .cloud-journey .village-foliage{display:none}
   #home-view .cloud-journey .hero .hero-copy{top:34%;left:7%;right:7%;z-index:5}
   #home-view .cloud-journey .hero h1 .rainbow-logo{width:min(290px,100%)}
   #home-view .cloud-journey .opening-cloud.upper-left,
-  #home-view .cloud-journey .opening-cloud.upper-right{display:none}
+  #home-view .cloud-journey .opening-cloud.upper-right{display:block}
   #home-view .cloud-journey .opening-cloud.left,
   #home-view .cloud-journey .opening-cloud.right{top:0;height:110%;width:110%;object-fit:cover}
   #home-view .cloud-journey .opening-cloud.left{left:-65%}
   #home-view .cloud-journey .opening-cloud.right{right:-65%}
   #home-view .cloud-enter{bottom:15%;z-index:6}
   #home-view[data-chapters][data-motion='playing'] #today{margin-top:-16svh}
+}
+/* Keep phone cloud geometry after the shared desktop bank rules. */
+@media(max-width:600px){
+  #home-view .cloud-journey .opening-cloud.upper-left,
+  #home-view .cloud-journey .opening-cloud.upper-right{top:-18%;height:58%;width:110%;object-fit:fill}
+  #home-view .cloud-journey .opening-cloud.upper-left{left:-48%}
+  #home-view .cloud-journey .opening-cloud.upper-right{right:-48%}
 }
 #home-view .cloud-enter{opacity:var(--enter-opacity,1)}
 #home-view .cloud-journey .hero{position:sticky;top:min(0px,calc(100svh - var(--scene-height,100svh)));overflow:hidden}
