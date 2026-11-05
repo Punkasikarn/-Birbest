@@ -117,7 +117,16 @@
   document.querySelector('#wonder').after(products);
   const footerLinks=document.createElement('nav'); footerLinks.className='flow-footer'; footerLinks.setAttribute('aria-label','เมนูท้ายหน้า');
   footerLinks.innerHTML='<a href="#/learn">เรียนรู้</a><a href="#/stories">เรื่องเล่า</a><a href="#/characters">เพื่อนของเรา</a><a href="#/shop">ร้านค้า</a><a href="#/about">รู้จัก Birbest</a><a href="#/privacy">ข้อมูลและความเป็นส่วนตัว</a>';
-  document.querySelector('footer').before(footerLinks);
+  const footerMenu = document.createElement('details');
+  footerMenu.className = 'footer-menu';
+  const footerSummary = document.createElement('summary');
+  footerSummary.textContent = 'เมนูเพิ่มเติม';
+  footerMenu.append(footerSummary, footerLinks);
+  document.querySelector('footer').before(footerMenu);
+  const compactFooter = window.matchMedia('(max-width:600px)');
+  const syncFooter = () => { footerMenu.open = !compactFooter.matches; };
+  compactFooter.addEventListener('change', syncFooter);
+  syncFooter();
 
   // Public destinations read from the founder's Linktree, 2026-10-04.
   const channels=[

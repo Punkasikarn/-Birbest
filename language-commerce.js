@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const copy = {
+    'เมนูเพิ่มเติม':'More links',
     'ติดตาม Birbest':'Follow Birbest',
     'เปิดในแท็บใหม่':'Opens in a new tab',
     'Bird School เรียบเรียงเพื่อการเรียนรู้จากแหล่งข้อมูลสัตวแพทย์และองค์กรด้านสวัสดิภาพนก เลือกอ่านแหล่งที่มาของคำแนะนำแต่ละเรื่องได้ในบทเรียนนั้น':'Bird School draws on veterinary and bird-welfare resources for educational reading. Each lesson links to the sources behind its guidance.',
