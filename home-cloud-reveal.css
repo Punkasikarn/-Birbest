@@ -14,9 +14,9 @@
   #home-view .cloud-journey{height:calc(var(--scene-height,100svh) + 40svh)}
   #home-view .cloud-journey .hero.layered-village{height:100svh;min-height:540px;padding-top:0;top:0}
   #home-view .cloud-journey .village-stage{position:absolute;inset:auto;bottom:0;left:50%;width:max(100%,150svh,810px);height:100%;aspect-ratio:3/2;transform:translateX(-50%);background-size:100% 100%;background-position:center bottom}
-  #home-view .cloud-journey .mascot-spot{width:12%;bottom:18%}
-  #home-view .cloud-journey .spot-millet{left:37%}
-  #home-view .cloud-journey .spot-sunny{left:51%;width:13%}
+  #home-view .cloud-journey .mascot-spot{width:min(52vw,230px);bottom:18%}
+  #home-view .cloud-journey .spot-millet{left:calc(50% - 51vw)}
+  #home-view .cloud-journey .spot-sunny{left:calc(50% - 1vw);width:min(54vw,240px)}
   #home-view .cloud-journey .village-foliage{display:none}
   #home-view .cloud-journey .hero .hero-copy{top:34%;left:7%;right:7%;z-index:5}
   #home-view .cloud-journey .hero h1 .rainbow-logo{width:min(290px,100%)}
@@ -46,6 +46,8 @@
 .site-header[data-cloud-nav='hidden']{transform:translateY(-105%);opacity:0;visibility:hidden;pointer-events:none}
 .site-header[data-cloud-nav='visible']{transform:translateY(0);opacity:1;visibility:visible}
 @media(max-width:600px){
+  #home-view .cloud-journey .hero .hero-copy{top:48%}
+  #home-view .cloud-journey .hero h1 .rainbow-logo{width:min(320px,100%)}
   #home-view .cloud-journey .opening-cloud.upper-left,
   #home-view .cloud-journey .opening-cloud.upper-right{top:-18%;height:58%;width:110%;object-fit:fill}
   #home-view .cloud-journey .opening-cloud.upper-left{left:-48%}
