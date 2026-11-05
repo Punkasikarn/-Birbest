@@ -25,7 +25,8 @@
           const image = speciesId === 'sun-conure' ? lesson.articleImage : null;
           return image ? `<img src="assets/${esc(image.file)}" alt="${esc(lesson.cardTitle || lesson.title)}" width="${image.width || 1536}" height="${image.height || 1024}" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover">` : '';
         };
-        return `<section class="species-stage" aria-labelledby="species-${g.id}"><h2 id="species-${g.id}" tabindex="-1">${esc(g.name)}</h2>${art ? `<img class="species-scene" src="assets/${esc(art.file)}" alt="${esc(art.alt)}" width="1536" height="1024" loading="lazy">` : ''}<div class="learning-cards">${g.lessons.map(l => `<a class="learning-card" href="${base}/${l.href}">${cardArt(l)}<div class="learning-card-copy"><h3>${esc(l.cardTitle || l.title)}</h3><p>${esc(l.text)}</p><span aria-hidden="true">→</span></div></a>`).join('')}</div></section>`;
+        const scene = speciesId === 'sun-conure' ? ({welcome:'sun-conure-lesson-01-20261018.webp',daily:'sun-conure-lesson-08-20261018.webp',understand:'learn-sun-conure-foraging-v1.webp'})[g.id] : art?.file;
+        return `<section class="species-stage learning-stage"${scene ? ` data-scene="${esc(scene)}"` : ''} aria-labelledby="species-${g.id}"><h2 id="species-${g.id}" tabindex="-1">${esc(g.name)}</h2><div class="learning-cards">${g.lessons.map(l => `<a class="learning-card" href="${base}/${l.href}">${cardArt(l)}<div class="learning-card-copy"><h3>${esc(l.cardTitle || l.title)}</h3><p>${esc(l.text)}</p><span aria-hidden="true">→</span></div></a>`).join('')}</div></section>`;
       }).join('');
       return result(title, heading(title,'ค่อย ๆ รู้จักน้อง ตั้งแต่วันแรกจนถึงทุกวันที่อยู่ด้วยกัน') + review + `<nav class="learning-shortcuts" aria-label="หัวข้อในหน้านี้">${shortcuts}</nav>` + stages);
     }

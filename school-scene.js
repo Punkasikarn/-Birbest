@@ -40,11 +40,12 @@
     hub.classList.toggle('school-scenic', isHub);
     if (!isHub || !media.matches) hub.querySelector('.school-backdrop')?.remove();
     if (!isHub) return;
+    const activeScenes = [...stages].map((stage,i) => stage.dataset.scene || scenes[i]);
     if (media.matches && !hub.querySelector('.school-backdrop')) {
       const backdrop = document.createElement('div');
       backdrop.className = 'school-backdrop';
       backdrop.setAttribute('aria-hidden', 'true');
-      scenes.forEach(file => {
+      activeScenes.forEach(file => {
         const img = document.createElement('img');
         img.src = 'assets/' + file; img.alt = '';
         backdrop.append(img);
@@ -58,7 +59,7 @@
         const img = document.createElement('img');
         img.className = 'learning-scene';
         img.alt = ''; img.width = 1536; img.height = 1024; img.loading = 'lazy';
-        img.src = 'assets/' + scenes[i];
+        img.src = 'assets/' + activeScenes[i];
         stage.querySelector('.learning-cards').before(img);
       });
     }
