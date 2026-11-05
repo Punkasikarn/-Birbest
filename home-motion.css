@@ -1,6 +1,6 @@
 /* Only artwork moves; navigation targets and reading surfaces stay still. */
 #home-view[data-motion] .motion-toggle{position:relative;z-index:2;display:block;margin:20px auto 0;min-height:44px;padding:8px 16px;border:1px solid #d5e3db;border-radius:24px;background:#fff;color:#294a3f;font-size:13px;cursor:pointer}
-#home-view[data-motion] #today::before{transform:scaleY(var(--cloud-arrival,1));transform-origin:center bottom}
+#home-view[data-motion] #today::before{transform:none}
 #home-view[data-motion='playing'] #friends .portrait-button img{transform-origin:55% 94%;transition:rotate .45s cubic-bezier(.22,1,.36,1)}
 @media(hover:hover) and (pointer:fine){
   #home-view[data-motion='playing'] #friends .yellow .portrait-button:hover img{rotate:-3deg}

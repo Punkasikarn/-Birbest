@@ -102,6 +102,8 @@
 /* Equal stacking levels let each later cloud paint over the previous chapter. */
 #home-view[data-chapters] :is(#today,#friends,.chapter-school,.home-story,.chapter-shop,.chapter-closing){position:relative;overflow:visible;isolation:isolate;z-index:1}
 #home-view[data-chapters] #today{--chapter-edge:url('assets/transition-chapter-white.svg');margin-top:0}
+/* A stationary edge avoids WebKit repaint flicker at the sticky scene boundary. */
+#home-view[data-chapters][data-motion] #today::before{transform:none;clip-path:none;filter:none;z-index:2}
 #home-view[data-chapters] #friends{--chapter-edge:url('assets/transition-chapter-green.svg')}
 #home-view[data-chapters] .chapter-school{--chapter-edge:url('assets/transition-chapter-white.svg')}
 #home-view[data-chapters] .home-story{--chapter-edge:url('assets/transition-story.svg')}
