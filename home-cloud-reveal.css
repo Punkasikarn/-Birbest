@@ -27,7 +27,7 @@
   #home-view .cloud-journey .opening-cloud.left{left:-65%}
   #home-view .cloud-journey .opening-cloud.right{right:-65%}
   #home-view .cloud-enter{bottom:15%;z-index:6}
-  #home-view[data-chapters][data-motion='playing'] #today{margin-top:-16svh}
+  #home-view[data-chapters][data-motion='playing'] #today{margin-top:0}
 }
 #home-view .cloud-enter{opacity:var(--enter-opacity,1)}
 #home-view .cloud-journey .hero{position:sticky;top:min(0px,calc(100svh - var(--scene-height,100svh)));overflow:hidden}
