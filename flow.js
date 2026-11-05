@@ -129,6 +129,10 @@
     {name:'Etsy',text:'Birbest',url:'https://birbest.etsy.com/',group:'shop'}
   ];
   const channelLinks=group=>`<div class="contact-links">${channels.filter(c=>c.group===group).map(c=>`<a href="${c.url}" target="_blank" rel="noopener noreferrer"><span><strong>${c.name}</strong><small>${c.text}</small></span><span aria-hidden="true">↗</span><span class="skip">เปิดในแท็บใหม่</span></a>`).join('')}</div>`;
+  const follow = document.createElement('section');
+  follow.className = 'footer-follow';
+  follow.innerHTML = `<h2>ติดตาม Birbest</h2><nav class="footer-social" aria-label="ติดตาม Birbest">${channels.filter(c=>c.group==='social').map(c=>`<a href="${c.url}" target="_blank" rel="noopener noreferrer" title="${c.name} · ${c.text}" class="social-${c.name.toLowerCase()}"><img src="assets/social/${c.name.toLowerCase()}.svg" alt="" width="24" height="24" loading="lazy"><span>${c.name}</span><span class="skip">เปิดในแท็บใหม่</span></a>`).join('')}</nav>`;
+  document.querySelector('footer').prepend(follow);
   footerLinks.insertAdjacentHTML('beforeend','<a href="#/contact">ติดต่อและติดตาม</a>');
 
   const availableSpecies=BirbestLearning.getAvailableSpecies();
